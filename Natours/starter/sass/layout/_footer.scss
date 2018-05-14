@@ -4,9 +4,17 @@
     font-size: 1.4rem;
     color: $color-grey-light-1;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
@@ -18,6 +26,11 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 3rem;
         display: inline-block; // occupy only content
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -35,6 +48,7 @@
     &__link {
         &:link,
         &:visited {
+            color: $color-grey-light-1;
             background-color: $color-grey-dark-3;
             text-decoration: none;
             text-transform: uppercase;
@@ -56,5 +70,10 @@
         // display: inline-block; // occupy only content
         width: 80%;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }
